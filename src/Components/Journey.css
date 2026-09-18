@@ -1,0 +1,356 @@
+/* =========================================
+   DEVELOPMENT JOURNEY
+========================================= */
+
+.journey {
+  width: 100%;
+
+  padding: 10px 0 90px;
+
+  background: var(--bg-color);
+
+  color: var(--text-color);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.journey-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.journey-header {
+  max-width: 700px;
+  margin-bottom: 75px;
+}
+
+.journey-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  color: #00e5ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.journey-label span {
+  width: 32px;
+  height: 1px;
+  background: #00e5ff;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.journey-header h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 55px);
+  line-height: 0.88;
+  letter-spacing: -4px;
+}
+
+.journey-header h2 span {
+  color: #aaaaaa;
+}
+
+.journey-header p {
+  max-width: 550px;
+  margin: 28px 0 0;
+  color: #888888;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.journey-timeline {
+  position: relative;
+
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Center line */
+
+.journey-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateX(-50%);
+}
+
+
+/* =========================================
+   JOURNEY ITEM
+========================================= */
+
+.journey-item {
+  position: relative;
+
+  min-height: 150px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 80px 1fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+.journey-year {
+  padding-right: 45px;
+
+  color: #aaaaaa;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   DOT
+========================================= */
+
+.journey-dot {
+  position: relative;
+
+  z-index: 2;
+
+  width: 80px;
+
+  height: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--bg-color);
+}
+
+.journey-dot span {
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #00e5ff;
+
+  box-shadow:
+    0 0 0 6px var(--bg-color),
+    0 0 15px rgba(0, 229, 255, 0.35);
+
+  transition: transform 0.3s ease;
+}
+
+.journey-item:hover .journey-dot span {
+  transform: scale(1.5);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.journey-content {
+  padding: 30px 0 30px 45px;
+}
+
+.journey-content h3 {
+  margin: 0 0 12px;
+
+  color: var(--text-color);
+
+  font-size: 25px;
+
+  letter-spacing: -0.5px;
+
+  transition: color 0.3s ease;
+}
+
+.journey-item:hover .journey-content h3 {
+  color: #00e5ff;
+}
+
+.journey-content p {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #888888;
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .journey {
+    padding: 80px 0 60px;
+  }
+
+  .journey-container {
+    padding: 0 30px;
+  }
+
+  .journey-header {
+    margin-bottom: 55px;
+  }
+
+  .journey-item {
+    grid-template-columns: 90px 40px 1fr;
+  }
+
+  .journey-timeline::before {
+    left: 110px;
+  }
+
+  .journey-dot {
+    width: 40px;
+    height: 70px;
+  }
+
+  .journey-year {
+    padding-right: 15px;
+
+    text-align: left;
+  }
+
+  .journey-content {
+    padding-left: 20px;
+  }
+
+  .journey-content h3 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .journey {
+    padding: 70px 0 50px;
+  }
+
+  .journey-container {
+    padding: 0 18px;
+  }
+
+  .journey-header {
+    margin-bottom: 45px;
+  }
+
+  .journey-header h2 {
+    font-size: 52px;
+
+    letter-spacing: -3px;
+  }
+
+  .journey-header p {
+    font-size: 13px;
+  }
+
+  .journey-item {
+    min-height: 135px;
+
+    grid-template-columns: 70px 30px 1fr;
+  }
+
+  .journey-timeline::before {
+    left: 85px;
+  }
+
+  .journey-dot {
+    width: 30px;
+  }
+
+  .journey-dot span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .journey-year {
+    padding-right: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .journey-content {
+    padding: 22px 0 22px 15px;
+  }
+
+  .journey-content h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+  }
+
+  .journey-content p {
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+}
+.journey-heading-h2 {
+  font-size: 2px;
+}
+
+
+
+

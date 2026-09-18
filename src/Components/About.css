@@ -1,0 +1,560 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about {
+  position: relative;
+
+  width: 100%;
+
+  background: var(--bg-color);
+
+  color: var(--text-color);
+
+  overflow: hidden;
+
+  /* NO 100vh */
+  min-height: auto;
+  height: auto;
+  padding: 40px 0 40px;
+  margin: 0;
+}
+
+
+/* =========================================
+   ABOUT CONTAINER
+========================================= */
+
+.about-container {
+  position: relative;
+
+  width: 100%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+
+  padding: 0 70px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 80px;
+  align-items: center;
+}
+
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.about-left {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 22px;
+  color: #00e5ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.section-label span {
+  display: block;
+
+  width: 32px;
+  height: 1px;
+
+  background: #00e5ff;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.about-left h2 {
+  margin: 0;
+
+  padding: 0;
+
+  color: var(--text-color);
+  font-size: clamp(32px, 4vw, 55px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.about-left h2 span {
+  color: #aaaaaa;
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   INTRO TEXT
+========================================= */
+
+.about-intro {
+  max-width: 570px;
+  margin: 28px 0 0 !important;
+  color: #cccccc !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.about-left p:not(.about-intro) {
+  max-width: 570px;
+
+  margin: 15px 0 0;
+
+  color: #888888;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   WORK TOGETHER LINK
+========================================= */
+
+.about-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  padding-bottom: 9px;
+
+  color: var(--text-color);
+
+  text-decoration: none;
+
+  border-bottom: 1px solid #aaaaaa;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.about-link:hover {
+  color: #00e5ff;
+
+  border-color: #00e5ff;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.about-right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   ABOUT CARD
+========================================= */
+
+.about-card {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px;
+  
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+
+  transition:
+    border-color 0.4s ease,
+    background 0.4s ease,
+    transform 0.4s ease;
+}
+
+.about-card:hover {
+  background: rgba(15, 15, 15, 0.9);
+  border-color: rgba(0, 229, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.about-card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00e5ff;
+  background: rgba(0, 229, 255, 0.05);
+  border: 1px solid rgba(0, 229, 255, 0.15);
+  border-radius: 12px;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.about-card h3 {
+  margin: 1px 0 8px;
+
+  color: var(--text-color);
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+}
+
+.about-card p {
+  margin: 0;
+
+  color: #888888;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.about-stats {
+  width: calc(100% - 140px);
+  max-width: 1240px;
+  margin: 30px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+
+/* =========================================
+   SINGLE STAT
+========================================= */
+
+.stat {
+  min-height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding-left: 25px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat:first-child {
+  padding-left: 0;
+
+  border-left: none;
+}
+
+
+/* =========================================
+   STAT NUMBER
+========================================= */
+
+.stat strong {
+  color: var(--text-color);
+
+  font-size: 34px;
+
+  line-height: 1;
+
+  font-weight: 700;
+
+  letter-spacing: -2px;
+}
+
+
+/* =========================================
+   STAT LABEL
+========================================= */
+
+.stat span {
+  color: #aaaaaa;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+}
+
+
+/* =========================================
+   BACKGROUND EFFECT
+========================================= */
+
+.about::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  right: -180px;
+  top: 20%;
+
+  border-radius: 50%;
+
+  background: #00e5ff;
+
+  opacity: 0.025;
+
+  filter: blur(120px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .about {
+    padding: 65px 0 55px;
+  }
+
+  .about-container {
+    padding: 0 45px;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 45px;
+  }
+
+  .about-left h2 {
+    font-size: 52px;
+  }
+
+  .about-intro {
+    font-size: 15px !important;
+  }
+
+  .about-stats {
+    width: calc(100% - 90px);
+
+    margin-top: 55px;
+  }
+
+  .stat strong {
+    font-size: 30px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .about {
+    padding: 70px 0 50px;
+
+    min-height: auto;
+
+    height: auto;
+  }
+
+
+  /* Main layout */
+
+  .about-container {
+    width: 100%;
+
+    padding: 0 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+
+    align-items: stretch;
+  }
+
+
+  /* Heading */
+
+  .about-left h2 {
+    font-size: 45px;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+  }
+
+
+  /* Text */
+
+  .about-intro {
+    font-size: 15px !important;
+
+    line-height: 1.7 !important;
+
+    margin-top: 24px !important;
+  }
+
+  .about-left p:not(.about-intro) {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Link */
+
+  .about-link {
+    margin-top: 22px;
+  }
+
+
+  /* Cards */
+
+  .about-right {
+    gap: 10px;
+  }
+
+  .about-card {
+    padding: 18px;
+
+    gap: 15px;
+  }
+
+  .about-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-card h3 {
+    font-size: 9px;
+  }
+
+  .about-card p {
+    font-size: 11px;
+  }
+
+
+  /* Stats */
+
+  .about-stats {
+    width: calc(100% - 44px);
+
+    margin-top: 50px;
+
+    padding-top: 25px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px 0;
+  }
+
+  .stat {
+    min-height: 55px;
+
+    padding-left: 15px;
+  }
+
+  .stat:nth-child(3) {
+    border-left: none;
+
+    padding-left: 0;
+  }
+
+  .stat strong {
+    font-size: 28px;
+  }
+
+  .stat span {
+    font-size: 7px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+  .about {
+    padding-top: 55px;
+  }
+
+  .about-container {
+    padding: 0 18px;
+
+    gap: 35px;
+  }
+
+  .about-left h2 {
+    font-size: 38px;
+  }
+
+  .about-intro {
+    font-size: 14px !important;
+  }
+
+  .about-card {
+    padding: 16px;
+  }
+
+  .about-stats {
+    width: calc(100% - 36px);
+  }
+}
+
+
+

@@ -1,0 +1,43 @@
+:root {
+  --font-primary: 'Outfit', sans-serif;
+  --font-secondary: 'Poppins', sans-serif;
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #00e5ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p, span, a, button, input, textarea {
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+
+
