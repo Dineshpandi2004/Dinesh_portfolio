@@ -1,0 +1,9 @@
+/* Custom cursor disabled in favor of standard arrow cursor */
+.cursor-outline,
+.cursor-dot {
+  display: none;
+}
+
+
+
+

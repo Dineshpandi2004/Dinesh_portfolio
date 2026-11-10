@@ -1,0 +1,315 @@
+/* =========================================
+   TECHNOLOGY
+========================================= */
+
+.technology {
+  width: 100%;
+  padding: 60px 0 80px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.technology-container {
+  width: 100%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+
+  padding: 0 70px;
+}
+/* =========================================
+   TECHNOLOGY
+========================================= */
+
+.technology {
+  width: 100%;
+  padding: 60px 0 80px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.technology-container {
+  width: 100%;
+  max-width: 1380px;
+
+  margin: 0 auto;
+
+  padding: 0 70px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.technology-heading {
+  max-width: 650px;
+  margin-bottom: 65px;
+}
+
+/* Label */
+
+.technology-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: #00e5ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.technology-label span {
+  width: 32px;
+  height: 1px;
+  background: #00e5ff;
+}
+
+/* Heading */
+
+.technology-heading h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(32px, 4vw, 55px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+.technology-heading h2 span {
+  color: #aaaaaa;
+}
+
+/* Description */
+
+.technology-heading p {
+  max-width: 580px;
+  margin: 25px 0 0;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.technology-list {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   GROUP
+========================================= */
+
+.technology-group {
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   CATEGORY
+========================================= */
+
+.technology-category {
+  padding: 30px 0;
+
+  color: #aaaaaa;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+}
+
+
+/* =========================================
+   ITEMS
+========================================= */
+
+.technology-items {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.technology-card {
+  position: relative;
+
+  min-height: 90px;
+
+  padding: 25px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: var(--bg-color);
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.technology-card:hover {
+  background: rgba(0, 229, 255, 0.05);
+}
+
+
+/* Number */
+
+.tech-number {
+  color: #aaaaaa;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+}
+
+
+/* Name */
+
+.tech-name {
+  color: #dddddd;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+/* Arrow */
+
+.tech-arrow {
+  position: absolute;
+
+  top: 20px;
+  right: 18px;
+
+  color: #bbbbbb;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.technology-card:hover .tech-arrow {
+  color: #00e5ff;
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .technology {
+    padding: 80px 0 60px;
+  }
+
+  .technology-container {
+    padding: 0 45px;
+  }
+
+  .technology-group {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .technology-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .technology {
+    padding: 70px 0 50px;
+  }
+
+  .technology-container {
+    padding: 0 20px;
+  }
+
+  .technology-heading {
+    margin-bottom: 45px;
+  }
+
+  .technology-heading h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: clamp(32px, 4vw, 55px);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+}
+
+  .technology-heading p {
+    font-size: 16px;
+  }
+
+  .technology-group {
+    display: block;
+  }
+
+  .technology-category {
+    padding: 20px 0 12px;
+  }
+
+  .technology-items {
+    grid-template-columns: repeat(2, 1fr);
+
+    border-left: none;
+  }
+
+  .technology-card {
+    min-height: 80px;
+
+    padding: 20px 15px;
+  }
+
+  .tech-name {
+    font-size: 11px;
+  }
+}
+
+
+
+

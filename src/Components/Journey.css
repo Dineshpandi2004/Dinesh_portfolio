@@ -1,0 +1,577 @@
+/* =========================================
+   DEVELOPMENT JOURNEY
+========================================= */
+
+.journey {
+  width: 100%;
+
+  padding: 10px 0 90px;
+
+  background: var(--bg-color);
+
+  color: var(--text-color);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.journey-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.journey-header {
+  max-width: 700px;
+  margin-bottom: 75px;
+}
+
+.journey-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+  color: #00e5ff;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.journey-label span {
+  width: 32px;
+  height: 1px;
+  background: #00e5ff;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.journey-header h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 55px);
+  line-height: 0.88;
+  letter-spacing: -4px;
+}
+
+.journey-header h2 span {
+  color: #aaaaaa;
+}
+
+.journey-header p {
+  max-width: 580px;
+  margin: 28px 0 0;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.journey-tabs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 55px;
+  flex-wrap: wrap;
+}
+
+.journey-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.04);
+  color: #aaaaaa;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.journey-tab:hover {
+  color: #ffffff;
+  border-color: rgba(0, 229, 255, 0.4);
+  background: rgba(0, 229, 255, 0.08);
+}
+
+.journey-tab.active {
+  background: #00e5ff;
+  color: #000000;
+  border-color: #00e5ff;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.journey-timeline {
+  position: relative;
+
+  width: 100%;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* Center line */
+
+.journey-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+  background: rgba(255, 255, 255, 0.1);
+
+  transform: translateX(-50%);
+}
+
+
+/* =========================================
+   JOURNEY ITEM
+========================================= */
+
+.journey-item {
+  position: relative;
+
+  min-height: 150px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 80px 1fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   YEAR
+========================================= */
+
+.journey-year {
+  padding-right: 45px;
+
+  color: #aaaaaa;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  text-align: right;
+}
+
+
+/* =========================================
+   DOT
+========================================= */
+
+.journey-dot {
+  position: relative;
+
+  z-index: 2;
+
+  width: 80px;
+
+  height: 80px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: var(--bg-color);
+}
+
+.journey-dot span {
+  width: 9px;
+
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #00e5ff;
+
+  box-shadow:
+    0 0 0 6px var(--bg-color),
+    0 0 15px rgba(0, 229, 255, 0.35);
+
+  transition: transform 0.3s ease;
+}
+
+.journey-item:hover .journey-dot span {
+  transform: scale(1.5);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.journey-content {
+  padding: 30px 0 30px 45px;
+}
+
+.journey-content h3 {
+  margin: 0 0 12px;
+
+  color: var(--text-color);
+
+  font-size: 25px;
+
+  letter-spacing: -0.5px;
+
+  transition: color 0.3s ease;
+}
+
+.journey-item:hover .journey-content h3 {
+  color: #00e5ff;
+}
+
+.journey-content p {
+  max-width: 520px;
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* =========================================
+   VERIFY CERTIFICATE BUTTON
+========================================= */
+
+.verify-cert-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: rgba(0, 229, 255, 0.1);
+  border: 1px solid #00e5ff;
+  color: #00e5ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.15);
+}
+
+.verify-cert-btn:hover {
+  background: #00e5ff;
+  color: #000000;
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .journey {
+    padding: 80px 0 60px;
+  }
+
+  .journey-container {
+    padding: 0 30px;
+  }
+
+  .journey-header {
+    margin-bottom: 55px;
+  }
+
+  .journey-item {
+    grid-template-columns: 90px 40px 1fr;
+  }
+
+  .journey-timeline::before {
+    left: 110px;
+  }
+
+  .journey-dot {
+    width: 40px;
+    height: 70px;
+  }
+
+  .journey-year {
+    padding-right: 15px;
+
+    text-align: left;
+  }
+
+  .journey-content {
+    padding-left: 20px;
+  }
+
+  .journey-content h3 {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .journey {
+    padding: 70px 0 50px;
+  }
+
+  .journey-container {
+    padding: 0 18px;
+  }
+
+  .journey-header {
+    margin-bottom: 45px;
+  }
+
+  .journey-header h2 {
+    font-size: clamp(30px, 8vw, 44px);
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    word-break: break-word;
+  }
+
+  .journey-header p {
+    font-size: 13px;
+  }
+
+  .journey-item {
+    min-height: 135px;
+
+    grid-template-columns: 70px 30px 1fr;
+  }
+
+  .journey-timeline::before {
+    left: 85px;
+  }
+
+  .journey-dot {
+    width: 30px;
+  }
+
+  .journey-dot span {
+    width: 7px;
+    height: 7px;
+  }
+
+  .journey-year {
+    padding-right: 10px;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .journey-content {
+    padding: 22px 0 22px 15px;
+  }
+
+  .journey-content h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+  }
+
+  .journey-content p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .journey-tabs {
+    gap: 10px;
+    margin-bottom: 35px;
+  }
+
+  .journey-tab {
+    padding: 10px 18px;
+    font-size: 9.5px;
+    letter-spacing: 1.5px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   CERTIFICATE MODAL LIGHTBOX
+========================================= */
+
+.cert-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(14px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cert-modal-content {
+  position: relative;
+  max-width: 860px;
+  width: 100%;
+  max-height: 90vh;
+  background: #0d0d0d;
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: 20px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.9), 0 0 45px rgba(0, 229, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cert-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.cert-modal-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cert-modal-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: #00e5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-modal-info h4 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.cert-modal-info p {
+  margin: 3px 0 0;
+  color: #aaaaaa;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+}
+
+.cert-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cert-modal-close:hover {
+  background: #ff4757;
+  border-color: #ff4757;
+  color: #ffffff;
+  transform: rotate(90deg);
+}
+
+.cert-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #060606;
+}
+
+.cert-modal-img {
+  max-width: 100%;
+  max-height: 62vh;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.cert-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.cert-modal-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: rgba(0, 229, 255, 0.12);
+  border: 1px solid rgba(0, 229, 255, 0.3);
+  color: #00e5ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cert-modal-action-btn:hover {
+  background: #00e5ff;
+  color: #000000;
+}
+
+
+
+
